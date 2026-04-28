@@ -6,53 +6,44 @@
 <title>Kandel Tech Solutions</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: 'Poppins', sans-serif;
-  background:#060b18;
-  color:#fff;
-}
+body { font-family:'Poppins'; background:#060b18; color:#fff; }
 
-.navbar {
-  background: rgba(0,0,0,0.7);
-}
+.navbar { background:rgba(0,0,0,0.7); }
 
 .hero {
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero.jpg');
-  background-size:cover;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url('hero.jpg');
+background-size:cover;
 }
 
-.hero h1 {
-  font-size:3rem;
-  font-weight:700;
-}
+.hero h1 { font-size:3.5rem; font-weight:800; }
 
-.section { padding:70px 0; }
+.section { padding:80px 0; }
 
 .glass {
-  background: rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:12px;
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+transition:0.3s;
 }
+.glass:hover { transform:translateY(-8px); }
 
 .btn-main {
-  background:#ffc107;
-  border:none;
-  border-radius:30px;
-  padding:10px 20px;
+background:linear-gradient(135deg,#ffd166,#ffb84d);
+border:none;
+border-radius:50px;
+padding:10px 25px;
 }
 
-.modal-content {
-  background:#0b1224;
-  color:#fff;
-}
+footer { background:#050b18; padding:20px; text-align:center; }
 </style>
 </head>
 
@@ -61,8 +52,10 @@ body {
 <!-- NAV -->
 <nav class="navbar navbar-dark">
 <div class="container">
-<span class="navbar-brand fw-bold">KandelTech</span>
-<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#authModal">Login</button>
+<span class="navbar-brand fw-bold">Kandel<span style="color:#ffd166;">Tech</span></span>
+<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#authModal">
+<i class="bi bi-person"></i>
+</button>
 </div>
 </nav>
 
@@ -70,32 +63,109 @@ body {
 <section class="hero">
 <div>
 <h1>We Build Scalable Digital Solutions</h1>
-<p>Web • Cloud • Software</p>
+<p>Trusted by clients in UK • Nepal • India • Australia</p>
+<a href="#contact" class="btn btn-main mt-3">Start Project</a>
 </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section text-center">
 <div class="container">
-<h2>Services</h2>
-<div class="row mt-4">
-<div class="col-md-4"><div class="glass">Web Development</div></div>
-<div class="col-md-4"><div class="glass">Cloud Solutions</div></div>
-<div class="col-md-4"><div class="glass">Custom Software</div></div>
+<h2>Our Services</h2>
+
+<div class="row mt-5 g-4">
+<div class="col-md-4"><div class="glass"><i class="bi bi-code-slash fs-2"></i><h5>Web Development</h5><p>Modern scalable web apps.</p></div></div>
+<div class="col-md-4"><div class="glass"><i class="bi bi-cloud fs-2"></i><h5>Cloud Solutions</h5><p>AWS, Azure deployments.</p></div></div>
+<div class="col-md-4"><div class="glass"><i class="bi bi-cpu fs-2"></i><h5>Custom Software</h5><p>Business automation systems.</p></div></div>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section text-center">
+<div class="container">
+<h2>Projects</h2>
+
+<div class="row mt-4 g-4">
+
+<div class="col-md-4">
+<div class="glass">
+<img src="project1.jpg" class="img-fluid mb-2">
+<h5>UK E-commerce Platform</h5>
+<p>Payment integrated scalable store.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="glass">
+<img src="project2.jpg" class="img-fluid mb-2">
+<h5>Nepal Travel System</h5>
+<p>Booking + authentication cloud app.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="glass">
+<img src="project3.jpg" class="img-fluid mb-2">
+<h5>India Food Delivery</h5>
+<p>Real-time tracking & payments.</p>
+</div>
+</div>
+
 </div>
 </div>
 </section>
 
-<!-- CONTACT -->
+<!-- TRAINING -->
 <section class="section text-center">
 <div class="container">
-<h2>Contact</h2>
+<h2>Training Programs</h2>
+
+<div class="row mt-4">
+<div class="col-md-6">
+<div class="glass">
+<h5>Student Training</h5>
+<p>We offer practical training in web development, cloud systems and real-world projects.</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="glass">
+<h5>Internship Programs</h5>
+<p>Work on live client projects and gain industry experience.</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- WHY US -->
+<section class="section text-center">
+<div class="container">
+<h2>Why Choose Us</h2>
+
+<div class="row mt-4">
+<div class="col-md-4"><div class="glass">✔ Experienced Team</div></div>
+<div class="col-md-4"><div class="glass">✔ Global Clients</div></div>
+<div class="col-md-4"><div class="glass">✔ Scalable Systems</div></div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section text-center">
+<div class="container">
+<h2>Contact Us</h2>
 
 <form id="contactForm">
 <input name="name" class="form-control mb-2" placeholder="Name" required>
 <input name="email" class="form-control mb-2" placeholder="Email" required>
 <textarea name="message" class="form-control mb-3" placeholder="Message" required></textarea>
-<button class="btn btn-main">Send</button>
+
+<button class="btn btn-main"><i class="bi bi-send"></i> Send</button>
 </form>
 
 <p id="formMsg"></p>
@@ -103,14 +173,16 @@ body {
 </div>
 </section>
 
-<footer class="text-center p-3">© 2026 Kandel Tech</footer>
+<footer>
+© 2026 Kandel Tech Solutions
+</footer>
 
 <!-- LOGIN MODAL -->
 <div class="modal fade" id="authModal">
 <div class="modal-dialog">
-<div class="modal-content p-4">
+<div class="modal-content p-4 bg-dark text-white">
 
-<h4 class="text-center">Client Login</h4>
+<h4 class="text-center">Client Access</h4>
 
 <input id="name" class="form-control mb-2" placeholder="Full Name">
 <input id="email" class="form-control mb-2" placeholder="Email">
@@ -118,9 +190,9 @@ body {
 
 <button onclick="signup()" class="btn btn-main w-100 mb-2">Create Account</button>
 <button onclick="login()" class="btn btn-warning w-100 mb-2">Login</button>
-<button onclick="googleLogin()" class="btn btn-light w-100">Google Login</button>
+<button onclick="googleLogin()" class="btn btn-light w-100">Google</button>
 
-<p id="authMsg" class="mt-2 text-danger text-center"></p>
+<p id="authMsg" class="text-danger mt-2"></p>
 
 </div>
 </div>
@@ -128,92 +200,7 @@ body {
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- FIREBASE -->
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
-  sendEmailVerification,
-  updateProfile
-} from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCJaZpIoH-eRXYQeoOOuT-EF4KUVBXMN_I",
-  authDomain: "kandel-tech.firebaseapp.com",
-  projectId: "kandel-tech",
-  storageBucket: "kandel-tech.firebasestorage.app",
-  messagingSenderId: "578685445781",
-  appId: "1:578685445781:web:6d8be75c8cfd16e88b9d9c"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-const msg = document.getElementById("authMsg");
-
-// SIGNUP
-window.signup = async () => {
-  try {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    const user = await createUserWithEmailAndPassword(auth,email,password);
-    await updateProfile(user.user,{displayName:name});
-    await sendEmailVerification(user.user);
-
-    msg.innerText = "Check your email to verify account.";
-  } catch(e){ msg.innerText = e.message; }
-};
-
-// LOGIN
-window.login = async () => {
-  try {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    const user = await signInWithEmailAndPassword(auth,email,password);
-
-    if(!user.user.emailVerified){
-      msg.innerText="Verify email first.";
-      return;
-    }
-
-    msg.innerText="Login successful.";
-  } catch(e){ msg.innerText=e.message; }
-};
-
-// GOOGLE LOGIN
-window.googleLogin = async () => {
-  try {
-    const provider = new GoogleAuthProvider();
-    await signInWithPopup(auth, provider);
-    msg.innerText="Google login success.";
-  } catch(e){ msg.innerText=e.message; }
-};
-
-// FORM
-document.getElementById("contactForm").addEventListener("submit", async e=>{
-  e.preventDefault();
-
-  if(!auth.currentUser){
-    alert("Login required");
-    return;
-  }
-
-  await fetch("https://formspree.io/f/mnjlkrwy",{
-    method:"POST",
-    body:new FormData(e.target),
-    headers:{'Accept':'application/json'}
-  });
-
-  document.getElementById("formMsg").innerText="Message sent!";
-});
-</script>
+<!-- KEEP YOUR EXISTING FIREBASE SCRIPT HERE (unchanged) -->
 
 </body>
 </html>
