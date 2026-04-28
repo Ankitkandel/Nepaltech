@@ -12,30 +12,43 @@
 <style>
 body { font-family:'Poppins'; background:#060b18; color:#fff; }
 
+/* NAV */
 .navbar { background:rgba(0,0,0,0.7); }
 
+/* HERO SLIDER */
 .hero {
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url('hero.jpg');
 background-size:cover;
+animation:slide 20s infinite;
+}
+
+@keyframes slide {
+0% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero.jpg'); }
+25% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero2.jpg'); }
+50% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero3.jpg'); }
+75% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero4.jpg'); }
+100% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero.jpg'); }
 }
 
 .hero h1 { font-size:3.5rem; font-weight:800; }
 
+/* SECTIONS */
 .section { padding:80px 0; }
 
+/* CARDS */
 .glass {
 background:rgba(255,255,255,0.05);
 padding:25px;
 border-radius:15px;
 transition:0.3s;
 }
-.glass:hover { transform:translateY(-8px); }
+.glass:hover { transform:translateY(-10px); }
 
+/* BUTTON */
 .btn-main {
 background:linear-gradient(135deg,#ffd166,#ffb84d);
 border:none;
@@ -44,15 +57,18 @@ padding:10px 25px;
 }
 
 footer { background:#050b18; padding:20px; text-align:center; }
+
+.modal-content { background:#0b1224; color:#fff; }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-dark">
 <div class="container">
 <span class="navbar-brand fw-bold">Kandel<span style="color:#ffd166;">Tech</span></span>
+
 <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#authModal">
 <i class="bi bi-person"></i>
 </button>
@@ -62,9 +78,21 @@ footer { background:#050b18; padding:20px; text-align:center; }
 <!-- HERO -->
 <section class="hero">
 <div>
-<h1>We Build Scalable Digital Solutions</h1>
-<p>Trusted by clients in UK • Nepal • India • Australia</p>
-<a href="#contact" class="btn btn-main mt-3">Start Project</a>
+<h1>We Build Powerful Digital Solutions</h1>
+<p>Web Development • Cloud Systems • Business Automation</p>
+<a href="#contact" class="btn btn-main mt-3">Start Your Project</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section text-center">
+<div class="container">
+<h2>About Us</h2>
+<p>
+Kandel Tech Solutions is a UK-based software development service delivering scalable digital products.
+We work with clients across UK, Nepal, India, and Australia to build reliable systems, modern websites,
+and cloud-powered applications that drive real business growth.
+</p>
 </div>
 </section>
 
@@ -74,84 +102,56 @@ footer { background:#050b18; padding:20px; text-align:center; }
 <h2>Our Services</h2>
 
 <div class="row mt-5 g-4">
-<div class="col-md-4"><div class="glass"><i class="bi bi-code-slash fs-2"></i><h5>Web Development</h5><p>Modern scalable web apps.</p></div></div>
-<div class="col-md-4"><div class="glass"><i class="bi bi-cloud fs-2"></i><h5>Cloud Solutions</h5><p>AWS, Azure deployments.</p></div></div>
-<div class="col-md-4"><div class="glass"><i class="bi bi-cpu fs-2"></i><h5>Custom Software</h5><p>Business automation systems.</p></div></div>
-</div>
-
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section class="section text-center">
-<div class="container">
-<h2>Projects</h2>
-
-<div class="row mt-4 g-4">
 
 <div class="col-md-4">
 <div class="glass">
-<img src="project1.jpg" class="img-fluid mb-2">
-<h5>UK E-commerce Platform</h5>
-<p>Payment integrated scalable store.</p>
+<i class="bi bi-code-slash fs-1"></i>
+<h5>Web Development</h5>
+<p>Custom websites, dashboards, and full-stack applications using modern technologies like React, Java, and APIs.</p>
 </div>
 </div>
 
 <div class="col-md-4">
 <div class="glass">
-<img src="project2.jpg" class="img-fluid mb-2">
-<h5>Nepal Travel System</h5>
-<p>Booking + authentication cloud app.</p>
+<i class="bi bi-cloud fs-1"></i>
+<h5>Cloud Solutions</h5>
+<p>Secure and scalable deployment using AWS, Azure, Docker, and microservices architecture.</p>
 </div>
 </div>
 
 <div class="col-md-4">
 <div class="glass">
-<img src="project3.jpg" class="img-fluid mb-2">
-<h5>India Food Delivery</h5>
-<p>Real-time tracking & payments.</p>
+<i class="bi bi-cpu fs-1"></i>
+<h5>Custom Software</h5>
+<p>Automation systems, CRM platforms, and enterprise tools tailored for your business needs.</p>
 </div>
 </div>
 
-</div>
-</div>
-</section>
-
-<!-- TRAINING -->
-<section class="section text-center">
-<div class="container">
-<h2>Training Programs</h2>
-
-<div class="row mt-4">
-<div class="col-md-6">
+<div class="col-md-4">
 <div class="glass">
-<h5>Student Training</h5>
-<p>We offer practical training in web development, cloud systems and real-world projects.</p>
+<i class="bi bi-bar-chart fs-1"></i>
+<h5>Data & Analytics</h5>
+<p>Transform your data into insights with dashboards, reporting tools, and data management systems.</p>
 </div>
 </div>
 
-<div class="col-md-6">
+<div class="col-md-4">
 <div class="glass">
-<h5>Internship Programs</h5>
-<p>Work on live client projects and gain industry experience.</p>
+<i class="bi bi-shield-lock fs-1"></i>
+<h5>Security Solutions</h5>
+<p>Secure authentication systems, data protection, and application security implementation.</p>
 </div>
+</div>
+
+<div class="col-md-4">
+<div class="glass">
+<i class="bi bi-mortarboard fs-1"></i>
+<h5>Training & Internship</h5>
+<p>We offer hands-on training and internship programs for students in web, cloud, and software development.</p>
 </div>
 </div>
 
 </div>
-</section>
-
-<!-- WHY US -->
-<section class="section text-center">
-<div class="container">
-<h2>Why Choose Us</h2>
-
-<div class="row mt-4">
-<div class="col-md-4"><div class="glass">✔ Experienced Team</div></div>
-<div class="col-md-4"><div class="glass">✔ Global Clients</div></div>
-<div class="col-md-4"><div class="glass">✔ Scalable Systems</div></div>
-</div>
-
 </div>
 </section>
 
@@ -161,11 +161,13 @@ footer { background:#050b18; padding:20px; text-align:center; }
 <h2>Contact Us</h2>
 
 <form id="contactForm">
-<input name="name" class="form-control mb-2" placeholder="Name" required>
-<input name="email" class="form-control mb-2" placeholder="Email" required>
-<textarea name="message" class="form-control mb-3" placeholder="Message" required></textarea>
+<input class="form-control mb-2" placeholder="Name" required>
+<input class="form-control mb-2" placeholder="Email" required>
+<textarea class="form-control mb-3" placeholder="Message" required></textarea>
 
-<button class="btn btn-main"><i class="bi bi-send"></i> Send</button>
+<button class="btn btn-main">
+<i class="bi bi-send"></i> Send Message
+</button>
 </form>
 
 <p id="formMsg"></p>
@@ -180,19 +182,16 @@ footer { background:#050b18; padding:20px; text-align:center; }
 <!-- LOGIN MODAL -->
 <div class="modal fade" id="authModal">
 <div class="modal-dialog">
-<div class="modal-content p-4 bg-dark text-white">
+<div class="modal-content p-4">
 
-<h4 class="text-center">Client Access</h4>
+<h4 class="text-center">Client Login</h4>
 
-<input id="name" class="form-control mb-2" placeholder="Full Name">
 <input id="email" class="form-control mb-2" placeholder="Email">
 <input id="password" type="password" class="form-control mb-3" placeholder="Password">
 
-<button onclick="signup()" class="btn btn-main w-100 mb-2">Create Account</button>
-<button onclick="login()" class="btn btn-warning w-100 mb-2">Login</button>
-<button onclick="googleLogin()" class="btn btn-light w-100">Google</button>
+<button onclick="login()" class="btn btn-main w-100 mb-2">Login</button>
 
-<p id="authMsg" class="text-danger mt-2"></p>
+<p id="authMsg"></p>
 
 </div>
 </div>
@@ -200,7 +199,33 @@ footer { background:#050b18; padding:20px; text-align:center; }
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- KEEP YOUR EXISTING FIREBASE SCRIPT HERE (unchanged) -->
+<!-- FIREBASE LOGIN -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCJaZpIoH-eRXYQeoOOuT-EF4KUVBXMN_I",
+  authDomain: "kandel-tech.firebaseapp.com",
+  projectId: "kandel-tech"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.login = async () => {
+  try {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    await signInWithEmailAndPassword(auth,email,password);
+
+    document.getElementById("authMsg").innerText="Login successful";
+  } catch(e){
+    document.getElementById("authMsg").innerText=e.message;
+  }
+};
+</script>
 
 </body>
 </html>
