@@ -3,73 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kandel Tech Solutions</title>
+
+<title>Kandel Tech Solutions | Software & Cloud Experts</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-body { font-family:'Poppins'; background:#060b18; color:#fff; }
+body { background:#060b18; color:#fff; font-family:Poppins; }
 
 /* NAV */
-.navbar { background:rgba(0,0,0,0.7); }
+.navbar { background:rgba(0,0,0,0.6); backdrop-filter:blur(10px); }
 
-/* HERO SLIDER */
+/* HERO */
 .hero {
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background-size:cover;
-animation:slide 20s infinite;
+background:linear-gradient(135deg,#0b1224,#1e3a8a);
 }
 
-@keyframes slide {
-0% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero.jpg'); }
-25% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero2.jpg'); }
-50% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero3.jpg'); }
-75% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero4.jpg'); }
-100% { background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('hero.jpg'); }
-}
+.hero h1 { font-size:3.8rem; font-weight:800; }
 
-.hero h1 { font-size:3.5rem; font-weight:800; }
-
-/* SECTIONS */
-.section { padding:80px 0; }
-
-/* CARDS */
-.glass {
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:15px;
-transition:0.3s;
-}
-.glass:hover { transform:translateY(-10px); }
-
-/* BUTTON */
 .btn-main {
 background:linear-gradient(135deg,#ffd166,#ffb84d);
 border:none;
+padding:12px 30px;
 border-radius:50px;
-padding:10px 25px;
 }
 
-footer { background:#050b18; padding:20px; text-align:center; }
+/* SECTION */
+.section { padding:80px 0; }
 
-.modal-content { background:#0b1224; color:#fff; }
+/* CARD */
+.card-box {
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+.card-box:hover { transform:translateY(-10px); }
+
+/* CTA */
+.cta {
+background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
+text-align:center;
+padding:80px 0;
+}
+
+/* FOOTER */
+footer { background:#050b18; padding:20px; text-align:center; }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav class="navbar navbar-dark">
 <div class="container">
-<span class="navbar-brand fw-bold">Kandel<span style="color:#ffd166;">Tech</span></span>
+<h4>Kandel <span style="color:#ffd166;">Tech</span></h4>
 
-<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#authModal">
+<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">
 <i class="bi bi-person"></i>
 </button>
 </div>
@@ -77,77 +74,66 @@ footer { background:#050b18; padding:20px; text-align:center; }
 
 <!-- HERO -->
 <section class="hero">
-<div>
-<h1>We Build Powerful Digital Solutions</h1>
-<p>Web Development • Cloud Systems • Business Automation</p>
-<a href="#contact" class="btn btn-main mt-3">Start Your Project</a>
-</div>
-</section>
+<div data-aos="zoom-in">
+<h1>We Build Scalable Software Systems</h1>
+<p>CRM • Dashboards • Cloud Platforms • Enterprise Apps</p>
+<a href="#contact" class="btn btn-main mt-3">Start Project</a>
 
-<!-- ABOUT -->
-<section class="section text-center">
-<div class="container">
-<h2>About Us</h2>
-<p>
-Kandel Tech Solutions is a UK-based software development service delivering scalable digital products.
-We work with clients across UK, Nepal, India, and Australia to build reliable systems, modern websites,
-and cloud-powered applications that drive real business growth.
-</p>
+<div class="row mt-5">
+<div class="col"><h4>50+</h4><p>Projects</p></div>
+<div class="col"><h4>4 Countries</h4><p>Clients</p></div>
+<div class="col"><h4>100%</h4><p>Delivery</p></div>
+</div>
+
 </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section text-center">
 <div class="container">
-<h2>Our Services</h2>
+<h2 data-aos="fade-up">Enterprise Services</h2>
 
 <div class="row mt-5 g-4">
 
 <div class="col-md-4">
-<div class="glass">
-<i class="bi bi-code-slash fs-1"></i>
-<h5>Web Development</h5>
-<p>Custom websites, dashboards, and full-stack applications using modern technologies like React, Java, and APIs.</p>
+<div class="card-box">
+<h5>Admin Dashboards</h5>
+<p>Role-based dashboards with analytics & real-time data.</p>
 </div>
 </div>
 
 <div class="col-md-4">
-<div class="glass">
-<i class="bi bi-cloud fs-1"></i>
-<h5>Cloud Solutions</h5>
-<p>Secure and scalable deployment using AWS, Azure, Docker, and microservices architecture.</p>
+<div class="card-box">
+<h5>CRM Systems</h5>
+<p>Lead tracking, automation workflows, reporting tools.</p>
 </div>
 </div>
 
 <div class="col-md-4">
-<div class="glass">
-<i class="bi bi-cpu fs-1"></i>
-<h5>Custom Software</h5>
-<p>Automation systems, CRM platforms, and enterprise tools tailored for your business needs.</p>
+<div class="card-box">
+<h5>Backend APIs</h5>
+<p>Secure scalable APIs using Java, Node & Python.</p>
 </div>
 </div>
 
 <div class="col-md-4">
-<div class="glass">
-<i class="bi bi-bar-chart fs-1"></i>
-<h5>Data & Analytics</h5>
-<p>Transform your data into insights with dashboards, reporting tools, and data management systems.</p>
+<div class="card-box">
+<h5>Payments</h5>
+<p>Stripe, PayPal, subscriptions & invoices.</p>
 </div>
 </div>
 
 <div class="col-md-4">
-<div class="glass">
-<i class="bi bi-shield-lock fs-1"></i>
-<h5>Security Solutions</h5>
-<p>Secure authentication systems, data protection, and application security implementation.</p>
+<div class="card-box">
+<h5>Authentication</h5>
+<p>Secure login, roles, multi-factor systems.</p>
 </div>
 </div>
 
 <div class="col-md-4">
-<div class="glass">
-<i class="bi bi-mortarboard fs-1"></i>
-<h5>Training & Internship</h5>
-<p>We offer hands-on training and internship programs for students in web, cloud, and software development.</p>
+<div class="card-box">
+<h5>Cloud Systems</h5>
+<p>AWS, Azure, Docker deployment pipelines.</p>
 </div>
 </div>
 
@@ -155,22 +141,106 @@ and cloud-powered applications that drive real business growth.
 </div>
 </section>
 
+<!-- CASE STUDIES -->
+<section class="section text-center">
+<div class="container">
+<h2>Case Studies</h2>
+
+<div class="row mt-5 g-4">
+
+<div class="col-md-4">
+<div class="card-box">
+<h5>UK CRM Platform</h5>
+<p>Built CRM system for healthcare recruitment agency with automation.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card-box">
+<h5>Nepal Food System</h5>
+<p>Multi-restaurant delivery platform with payment integration.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card-box">
+<h5>Australia Dashboard</h5>
+<p>Analytics dashboard with real-time cloud data.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section class="section bg-dark text-center">
+<div class="container">
+<h2>Our Process</h2>
+
+<div class="row mt-4">
+
+<div class="col-md-3"><div class="card-box">Planning</div></div>
+<div class="col-md-3"><div class="card-box">Development</div></div>
+<div class="col-md-3"><div class="card-box">Testing</div></div>
+<div class="col-md-3"><div class="card-box">Deployment</div></div>
+
+</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section class="section text-center">
+<div class="container">
+<h2>Engagement Models</h2>
+
+<div class="row mt-5">
+
+<div class="col-md-4">
+<div class="card-box">
+<h5>Starter</h5>
+<p>£500 - £1500</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card-box">
+<h5>Business</h5>
+<p>£1500 - £5000</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card-box">
+<h5>Enterprise</h5>
+<p>£5000+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="container">
+<h2>Let’s Build Something Powerful</h2>
+<a href="#contact" class="btn btn-main">Contact Now</a>
+</div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="section text-center">
 <div class="container">
-<h2>Contact Us</h2>
+<h2>Contact</h2>
 
-<form id="contactForm">
-<input class="form-control mb-2" placeholder="Name" required>
-<input class="form-control mb-2" placeholder="Email" required>
-<textarea class="form-control mb-3" placeholder="Message" required></textarea>
+<form>
+<input class="form-control mb-2" placeholder="Name">
+<input class="form-control mb-2" placeholder="Email">
+<textarea class="form-control mb-3" placeholder="Message"></textarea>
 
-<button class="btn btn-main">
-<i class="bi bi-send"></i> Send Message
-</button>
+<button class="btn btn-main">Send</button>
 </form>
-
-<p id="formMsg"></p>
 
 </div>
 </section>
@@ -180,50 +250,50 @@ and cloud-powered applications that drive real business growth.
 </footer>
 
 <!-- LOGIN MODAL -->
-<div class="modal fade" id="authModal">
+<div class="modal fade" id="loginModal">
 <div class="modal-dialog">
 <div class="modal-content p-4">
 
-<h4 class="text-center">Client Login</h4>
+<h4>Client Login</h4>
 
 <input id="email" class="form-control mb-2" placeholder="Email">
 <input id="password" type="password" class="form-control mb-3" placeholder="Password">
 
-<button onclick="login()" class="btn btn-main w-100 mb-2">Login</button>
+<button onclick="login()" class="btn btn-main w-100">Login</button>
 
-<p id="authMsg"></p>
+<p id="loginMsg"></p>
 
 </div>
 </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-<!-- FIREBASE LOGIN -->
+<script>AOS.init();</script>
+
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCJaZpIoH-eRXYQeoOOuT-EF4KUVBXMN_I",
-  authDomain: "kandel-tech.firebaseapp.com",
-  projectId: "kandel-tech"
-};
+const app = initializeApp({
+apiKey:"AIzaSyCJaZpIoH-eRXYQeoOOuT-EF4KUVBXMN_I",
+authDomain:"kandel-tech.firebaseapp.com",
+projectId:"kandel-tech"
+});
 
-const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-window.login = async () => {
-  try {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    await signInWithEmailAndPassword(auth,email,password);
-
-    document.getElementById("authMsg").innerText="Login successful";
-  } catch(e){
-    document.getElementById("authMsg").innerText=e.message;
-  }
+window.login = async ()=>{
+try{
+await signInWithEmailAndPassword(auth,
+document.getElementById("email").value,
+document.getElementById("password").value
+);
+document.getElementById("loginMsg").innerText="Login successful";
+}catch(e){
+document.getElementById("loginMsg").innerText=e.message;
+}
 };
 </script>
 
