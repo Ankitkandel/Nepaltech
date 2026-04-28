@@ -16,10 +16,8 @@ body {
   font-family: Arial;
 }
 
-/* NAV */
 .navbar { background:rgba(0,0,0,0.7); }
 
-/* HERO */
 .hero {
   padding:120px;
   text-align:center;
@@ -50,8 +48,6 @@ body {
   padding:10px 25px;
   border-radius:30px;
 }
-
-#protectedContent { display:none; }
 </style>
 
 </head>
@@ -65,7 +61,7 @@ body {
 <a class="navbar-brand fw-bold">Kandel<span style="color:#ffd166;">Tech</span></a>
 
 <div id="navGuest">
-  <span class="text-light">Client Portal</span>
+  <button onclick="openLogin()" class="btn btn-outline-light">Login</button>
 </div>
 
 <div id="navUser" style="display:none;">
@@ -75,35 +71,14 @@ body {
 </div>
 </nav>
 
-<!-- LOGIN -->
-
-<section id="loginSection" class="text-center p-5">
-<div class="container" style="max-width:500px">
-
-<h2 class="mb-4">Client Portal</h2>
-
-<input id="email" type="email" class="form-control mb-3" placeholder="Email address">
-<input id="password" type="password" class="form-control mb-3" placeholder="Password">
-
-<button onclick="login()" class="btn btn-warning w-100 mb-2">Login</button>
-
-<button onclick="signup()" class="btn btn-outline-light w-100 mb-2">Create Account</button>
-
-<button onclick="googleLogin()" class="btn btn-light w-100">
-  <i class="bi bi-google"></i> Continue with Google
-</button>
-
-</div>
-</section>
-
-<!-- PROTECTED CONTENT -->
-
-<div id="protectedContent">
+<!-- HERO -->
 
 <section class="hero">
 <h1>We Build Scalable Digital Solutions</h1>
 <p>Web • Cloud • Software</p>
 </section>
+
+<!-- SERVICES -->
 
 <section class="section text-center">
 <div class="container">
@@ -157,7 +132,29 @@ body {
 </div>
 </section>
 
+<!-- LOGIN MODAL -->
+
+<div class="modal fade" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-white p-4">
+
+```
+  <h4 class="mb-3">Client Login</h4>
+
+  <input id="email" class="form-control mb-2" placeholder="Email">
+  <input id="password" type="password" class="form-control mb-2" placeholder="Password">
+
+  <button onclick="login()" class="btn btn-warning w-100 mb-2">Login</button>
+  <button onclick="signup()" class="btn btn-outline-light w-100 mb-2">Create Account</button>
+  <button onclick="googleLogin()" class="btn btn-light w-100">Google Login</button>
+
 </div>
+```
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- FIREBASE -->
 
@@ -183,7 +180,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// SIGNUP WITH VERIFICATION
+// OPEN LOGIN MODAL
+window.openLogin = () => {
+  new bootstrap.Modal(document.getElementById('loginModal')).show();
+};
+
+// SIGNUP
 window.signup = async () => {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
@@ -228,30 +230,24 @@ window.googleLogin = () => {
 // LOGOUT
 window.logout = () => signOut(auth);
 
-// AUTH STATE UI CONTROL
+// NAVBAR SWITCH
 onAuthStateChanged(auth, user => {
-  const loginSection = document.getElementById("loginSection");
-  const protectedContent = document.getElementById("protectedContent");
-
   if (user && user.emailVerified) {
-    loginSection.style.display = "none";
-    protectedContent.style.display = "block";
     document.getElementById("navUser").style.display = "block";
     document.getElementById("navGuest").style.display = "none";
   } else {
-    loginSection.style.display = "block";
-    protectedContent.style.display = "none";
     document.getElementById("navUser").style.display = "none";
     document.getElementById("navGuest").style.display = "block";
   }
 });
 
-// FORM SUBMIT
+// FORM SUBMIT (LOGIN REQUIRED)
 document.getElementById("contactForm").addEventListener("submit", async function(e){
   e.preventDefault();
 
   if(!auth.currentUser){
-    alert("Login required");
+    alert("Please login first");
+    openLogin();
     return;
   }
 
